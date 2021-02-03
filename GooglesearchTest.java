@@ -45,7 +45,7 @@ public class GooglesearchTest {
     // 2 | selectFrame | index=0 |  | 
     driver.switchTo().frame(0);
     // 3 | click | css=#introAgreeButton .RveJvd |  | 
-    driver.findElement(By.cssSelector("#introAgreeButton .RveJvd")).click();
+    driver.wait(until.elementLocated(By.cssSelector("#introAgreeButton .RveJvd")).click();
     // 4 | selectFrame | relative=parent |  | 
     driver.switchTo().defaultContent();
     // 5 | type | name=q | devops | 
@@ -55,6 +55,6 @@ public class GooglesearchTest {
     // 7 | runScript | window.scrollTo(0,114) |  | 
     js.executeScript("window.scrollTo(0,114)");
     // 8 | click | css=.g:nth-child(8) .LC20lb > span |  | 
-    driver.findElement(By.cssSelector(".g:nth-child(8) .LC20lb > span")).click();
+    driver.wait(until.elementLocated(By.csselector(".g:nth-child(8) .LC20lb > span")).click();
   }
 }
