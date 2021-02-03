@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
     private final MainPage mainPage = new MainPage();
@@ -25,7 +24,7 @@ public class MainPageTest {
     @BeforeEach
     public void setUp() {
         Configuration.startMaximized = true;
-        open("https://www.jetbrains.com/");
+        Selenide.open("https://www.jetbrains.com/");
     }
 
     @Test

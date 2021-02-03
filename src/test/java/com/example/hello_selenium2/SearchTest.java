@@ -1,11 +1,11 @@
 package com.example.hello_selenium2;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -40,7 +40,7 @@ public class SearchTest {
         /*driver = new FirefoxDriver();
         options.setHeadless(true);*/
         Configuration.startMaximized = true;
-        open("about:blank");
+        Selenide.open("about:blank");
         driver = getWebDriver();
 
         js = (JavascriptExecutor) driver;
@@ -52,7 +52,7 @@ public class SearchTest {
     }
 
     @Test
-    public void googlesearch() {
+    public void SearchTest() {
         // Test name: google search
         // Step # | name | target | value | comment
         // 1 | open | https://www.google.com/ |  |
