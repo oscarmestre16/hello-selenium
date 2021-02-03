@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.hello_selenium2.SearchTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-02-03T15:50:17" hostname="ubuntu" time="3.102">
+<testsuite name="com.example.hello_selenium2.SearchTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-02-03T16:11:47" hostname="ubuntu" time="4.039">
   <properties/>
-  <testcase name="googlesearch()" classname="com.example.hello_selenium2.SearchTest" time="3.102">
-    <failure message="org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-132-generic', java.version: '11.0.9.1'&#10;Driver info: driver.version: SelenideDriver&#10;selenide.url: about:blank&#10;selenide.baseUrl: http://localhost:8080&#10;remote stacktrace: #0 0x55ec402c1199 &lt;unknown&gt;&#10;" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
+  <testcase name="googlesearch()" classname="com.example.hello_selenium2.SearchTest" time="4.039">
+    <failure message="org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-132-generic', java.version: '11.0.9.1'&#10;Driver info: driver.version: SelenideDriver&#10;selenide.url: about:blank&#10;selenide.baseUrl: http://localhost:8080&#10;remote stacktrace: #0 0x55d06d2fc199 &lt;unknown&gt;&#10;" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: cannot find Chrome binary
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ubuntu', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.15.0-132-generic', java.version: '11.0.9.1'
 Driver info: driver.version: SelenideDriver
 selenide.url: about:blank
 selenide.baseUrl: http://localhost:8080
-remote stacktrace: #0 0x55ec402c1199 &lt;unknown&gt;
+remote stacktrace: #0 0x55d06d2fc199 &lt;unknown&gt;
 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -146,10 +146,10 @@ remote stacktrace: #0 0x55ec402c1199 &lt;unknown&gt;
   </testcase>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 11 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /home/viewadmin/hello-selenium2/build/downloads/1612367417675_94966_11
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /home/viewadmin/hello-selenium2/build/downloads/1612368707785_107589_11
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/viewadmin/.cache/selenium/chromedriver/linux64/88.0.4324.96/chromedriver
-[Test worker] INFO com.codeborne.selenide.webdriver.AbstractDriverFactory - Write webdriver logs to: /home/viewadmin/hello-selenium2/build/reports/tests/webdriver.1612367419174_94966_11.log
-Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 23912
+[Test worker] INFO com.codeborne.selenide.webdriver.AbstractDriverFactory - Write webdriver logs to: /home/viewadmin/hello-selenium2/build/reports/tests/webdriver.1612368709628_107589_11.log
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 10126
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
