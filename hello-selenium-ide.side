@@ -1,0 +1,229 @@
+{
+  "id": "ab02f47c-057f-4094-a1df-81e05646ee2b",
+  "version": "2.0",
+  "name": "hello-selenium-ide",
+  "url": "http://www.google.com",
+  "tests": [{
+    "id": "8e314e86-8af0-46f9-9f7f-a23ae6fe74e1",
+    "name": "stackoverflow",
+    "commands": [{
+      "id": "7a49eb17-7841-4559-a711-b7e023180b68",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccfde35a-673b-48a6-97da-34b4df9d90ce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "812x794",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11028372-c409-46b8-88c2-faa4c6b024f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31b358ca-8067-4f68-8bb8-0b42cc3bb8f2",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "playstation 4 pro"
+    }, {
+      "id": "9328cd10-c7ce-4126-9769-bf6f81b6bcb2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }, {
+    "id": "e4c34dd6-5364-4a70-a89f-8eec2d02c502",
+    "name": "wanda",
+    "commands": [{
+      "id": "9bdab61b-1786-4b24-855a-1b90009085e5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.rottentomatoes.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e9554af-bc3f-45fe-a097-723b072831f6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.search-text",
+      "targets": [
+        ["css=.search-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//nav[@id='navbar']/search-algolia/search-algolia-controls/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Wandavision"
+    }, {
+      "id": "0080c226-9a83-466e-a9d8-95f7fedcf5b2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "css=.search-text",
+      "targets": [
+        ["css=.search-text", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//nav[@id='navbar']/search-algolia/search-algolia-controls/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "6226f515-d05e-4f4e-b922-46d15b588e12",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,171)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78de5ad4-0757-403f-88bc-b22b859bcdcb",
+      "comment": "",
+      "command": "click",
+      "target": "css=search-result-container",
+      "targets": [
+        ["css=search-result-container", "css:finder"],
+        ["xpath=//div[@id='main-page-content']/div/section/search-result-container", "xpath:idRelative"],
+        ["xpath=//search-result-container", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89a955d9-042d-47d1-8d34-efad1dc618fd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Episode 05",
+      "targets": [
+        ["linkText=Episode 05", "linkText"],
+        ["css=.info > .title-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Episode 05')]", "xpath:link"],
+        ["xpath=//section[@id='most-recent-episode']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/tv/wandavision/s01/e05')]", "xpath:href"],
+        ["xpath=//section/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Episode 05')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c707633-e9b5-4d5e-bae1-90aed89a3f05",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Episode 05",
+      "targets": [
+        ["linkText=Episode 05", "linkText"],
+        ["css=.info > .title-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Episode 05')]", "xpath:link"],
+        ["xpath=//section[@id='most-recent-episode']/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/tv/wandavision/s01/e05')]", "xpath:href"],
+        ["xpath=//section/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Episode 05')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "abb761e9-a328-44c2-beb8-e9778a2a4a48",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,171)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea6c7c53-7d89-4236-b656-e7760d8d7538",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cast-item:nth-child(1) .actorThumb",
+      "targets": [
+        ["css=.cast-item:nth-child(1) .actorThumb", "css:finder"],
+        ["xpath=//img[contains(@src,'https://resizing.flixster.com/paRklULgLs8jNucjTq1o9ljiYyA=/100x120/v2/https://flxt.tmsimg.com/v9/AllPhotos/620481/620481_v9_bb.jpg')]", "xpath:img"],
+        ["xpath=//section[@id='fullCast']/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4519d984-e310-464d-9c81-47303b2862f1",
+    "name": "google search",
+    "commands": [{
+      "id": "95faa0c5-1fa0-43ba-8f54-89e87535ce17",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.es/?gws_rd=ssl",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f40b8742-95e3-49d4-89c2-00ba0769bf10",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ff1d3b5-6caf-40b9-9141-b26a8db627c8",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "devops"
+    }, {
+      "id": "7d4d026c-c52e-4982-bc57-60368d1ba3bb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }]
+  }],
+  "suites": [{
+    "id": "afe21822-0713-4319-a3db-4e8092b741e2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4519d984-e310-464d-9c81-47303b2862f1"]
+  }],
+  "urls": ["https://stackoverflow.com/", "https://www.amazon.es/", "https://www.amazon.com/", "https://www.rottentomatoes.com/", "http://www.google.com/"],
+  "plugins": []
+}
