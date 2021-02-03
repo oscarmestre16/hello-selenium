@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
     private final MainPage mainPage = new MainPage();
@@ -24,7 +25,7 @@ public class MainPageTest {
     @BeforeEach
     public void setUp() {
         Configuration.startMaximized = true;
-        Selenide.open("https://www.jetbrains.com/");
+        open("https://www.jetbrains.com/");
     }
 
     @Test
@@ -34,22 +35,18 @@ public class MainPageTest {
         $(byId("header-search")).sendKeys("Selenium");
         $(byXpath("//button[@type='submit' and text()='Search']")).click();
 
-        $(byClassName("js-search-input")).shouldHave(attribute("value", "Selenium"));
+        $(byName("q")).shouldHave(attribute("value", "Selenium"));
     }
-
-   /* @Test
+    /*
+    @Test
     public void toolsMenu() {
         mainPage.toolsMenu.hover();
-
-        $(byClassName("menu-main__popup-wrapper")).shouldBe(visible);
+        $(byClassName("menu-main-popup-content")).shouldBe(visible);
     }
-
     @Test
     public void navigationToAllTools() {
         mainPage.seeAllToolsButton.click();
-
         $(byClassName("products-list")).shouldBe(visible);
-
         assertEquals("All Developer Tools and Products by JetBrains", Selenide.title());
     }*/
 }

@@ -1,31 +1,21 @@
 package com.example.hello_selenium2;
 
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.core.IsNot.not;
-
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.Keys;
+
+import java.time.Duration;
 import java.util.*;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class RottenTest {
     private WebDriver driver;
@@ -33,12 +23,9 @@ public class RottenTest {
     JavascriptExecutor js;
     @BeforeEach
     public void setUp() {
-         /*driver = new FirefoxDriver();
-        options.setHeadless(true);*/
-        Configuration.startMaximized = true;
-        Selenide.open("about:blank");
-        driver = getWebDriver();
-
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        driver = new FirefoxDriver(options);
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }
@@ -50,15 +37,12 @@ public class RottenTest {
     public void wanda() {
 
         driver.get("https://www.imdb.com/");
-
-        driver.findElement(By.id("suggestion-search")).click();
-        driver.findElement(By.id("suggestion-search")).sendKeys("Wandavision");
-        driver.findElement(By.id("suggestion-search")).sendKeys(Keys.ENTER);
-        WebElement wandaresult = new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),\'WandaVision\')]")));
-        driver.findElement(By.xpath("//a[contains(text(),\'WandaVision\')]")).click();
-        js.executeScript("window.scrollTo(0,741)");
-        WebElement we = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.linkText("TRIVIA")));
-        we.click();
+        driver.findElement(By.name("q")).click();
+        driver.findElement(By.name("q")).sendKeys("wandavision");
+        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+        new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated((By.linkText("WandaVision")))).click();
+        js.executeScript("window.scrollTo(0,285)");
+        driver.findElement(By.linkText("TRIVIA")).click();
     }
 }
 
